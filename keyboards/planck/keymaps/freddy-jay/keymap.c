@@ -39,15 +39,6 @@ enum planck_keycodes {
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
-#define MOUSEKEY_INTERVAL 16
-
-#define MOUSEKEY_DELAY 0
-
-#define MOUSEKEY_TIME_TO_MAX 60
-
-#define MOUSEKEY_MAX_SPEED 7
-
-#define MOUSEKEY_WHEEL_DELAY 0
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -136,9 +127,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_LOWER] = LAYOUT_planck_grid(
     KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
-    KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
+    TG(9),  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
     _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______,
-    TG(9),    _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+    _______,    _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
 ),
 
 /* Adjust (Lower + Raise)
@@ -161,9 +152,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 [9] = LAYOUT_planck_grid(
       KC_TAB,   KC_NO,     KC_NO,     KC_NO,    KC_NO,      KC_NO,          KC_NO,    KC_NO,      KC_MS_U,    KC_NO,      KC_WH_D,    _______,  
-      KC_NO,    KC_NO,     KC_NO,     KC_BTN2,  KC_BTN1,    KC_NO,          KC_NO,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_U,    KC_NO,  
-      KC_LSFT,  KC_Z,      KC_X,      KC_C,     KC_V,       KC_NO,          KC_NO,    KC_NO,      KC_NO,      KC_NO,      KC_NO,      KC_NO,   
-      TG(9),    KC_LCTL,   KC_LALT,   KC_LGUI,  _______,    KC_NO,          KC_NO,    KC_NO,      _______,    _______,    _______,    _______
+      TG(9),    KC_NO,     KC_NO,     KC_BTN2,  KC_BTN1,    KC_NO,          KC_NO,    KC_MS_L,    KC_MS_D,    KC_MS_R,    KC_WH_U,    KC_NO,  
+      KC_LSFT,  KC_Z,      KC_X,      KC_C,     KC_V,       KC_NO,          KC_NO,    KC_NO,      KC_NO,      KC_NO,      KC_NO,      _______,   
+      KC_NO,    KC_LCTL,   KC_LALT,   KC_LGUI,  _______,    KC_NO,          KC_NO,    KC_NO,      _______,    _______,    _______,    _______
   ),
 };
 
