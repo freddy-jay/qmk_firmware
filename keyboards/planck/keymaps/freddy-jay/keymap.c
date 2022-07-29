@@ -39,9 +39,6 @@ enum planck_keycodes {
 
 #define LOWER MO(_LOWER)
 #define RAISE MO(_RAISE)
-
-#define AUTO_SHIFT_TIMEOUT 200
-
 #define MOUSEKEY_INTERVAL 16
 
 #define MOUSEKEY_DELAY 0
